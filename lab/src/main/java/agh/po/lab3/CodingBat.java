@@ -7,9 +7,9 @@ public class CodingBat {
     public static void main(String[] args) {
         CodingBat cb = new CodingBat();
         System.out.println(cb.sleepIn(true, false));
-        System.out.println(cb.loneTeen(14,67));
+        System.out.println(cb.loneTeen(14, 67));
         System.out.println(cb.helloName("Boron"));
-        System.out.println(cb.firstLast6(new int[]{1,2,3,4,6}));
+        System.out.println(cb.firstLast6(new int[]{1, 2, 3, 4, 6}));
     }
 
     public boolean sleepIn(boolean weekday, boolean vacation) {
@@ -25,18 +25,17 @@ public class CodingBat {
 
         return (aTeen && !bTeen) || (!aTeen && bTeen);
     }
+
     public String helloName(String name) {
         return ("Hello " + name + "!");
     }
+
     public boolean firstLast6(int[] nums) {
-        if ((nums[0] == 6) || (nums[nums.length-1] == 6)){
+        if ((nums[0] == 6) || (nums[nums.length - 1] == 6)) {
             return true;
         }
         return false;
     }
-
-
-
 }
 
 
