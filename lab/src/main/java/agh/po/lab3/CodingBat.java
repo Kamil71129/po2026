@@ -1,6 +1,8 @@
 package agh.po.lab3;
 
 
+import java.util.HashMap;
+import java.util.Map;
 
 public class CodingBat {
 
@@ -10,6 +12,7 @@ public class CodingBat {
         System.out.println(cb.loneTeen(14, 67));
         System.out.println(cb.helloName("Boron"));
         System.out.println(cb.firstLast6(new int[]{1, 2, 3, 4, 6}));
+
     }
 
     public boolean sleepIn(boolean weekday, boolean vacation) {
@@ -36,6 +39,29 @@ public class CodingBat {
         }
         return false;
     }
+
+    public Map<String, String> mapAB3(Map<String, String> map) {
+        if (map.containsKey("a") && !map.containsKey("b")) {
+            map.put("b", map.get("a"));
+        } else if (map.containsKey("b") && !map.containsKey("a")) {
+            map.put("a", map.get("b"));
+        }
+        return map;
+    }
+
+    public Map<String, Boolean> wordMultiple(String[] strings) {
+        Map<String, Boolean> map = new HashMap<String, Boolean>();
+        for (String s : strings) {
+            if (map.containsKey(s)) {
+                map.put(s, true);
+            } else {
+                map.put(s, false);
+            }
+        }
+        return map;
+    }
+
+
 }
 
 
